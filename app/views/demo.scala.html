@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <!-- <link rel="stylesheet" type="text/css" href="demo-light.css"> -->
+    <title>Teads Bootcamp - Scala</title>
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("stylesheets/main.css")">
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("stylesheets/demo.css")">
+
+    <meta name="robots" content="noindex" />
+</head>
+
+<body class="desktop main-panel-open not-logged  iframe mobile-scrollbar" data-team-rank="0">
+<!--[if lte IE 9]>
+<div class="alert alert-warning clearfix update-browser-message">
+    Le navigateur que vous utilisez est obsolète. Il peut ne pas afficher toutes les fonctionnalités de ce site. Veuillez mettre à jour votre navigateur. <br />
+    <a href="https://www.google.com/chrome" target="_blank">Google Chrome</a> - <a href="https://www.mozilla-europe.org" target="_blank">Firefox</a> - <a href="https://www.microsoft.com/microsoft-edge" target="_blank">Microsoft Edge</a>
+</div>
+<![endif]-->
+<style>#impactify-rs{-webkit-transition:all 500ms cubic-bezier(0.250,0.250,0.750,0.750);-moz-transition:all 500ms cubic-bezier(0.250,0.250,0.750,0.750);-o-transition:all 500ms cubic-bezier(0.250,0.250,0.750,0.750);transition:all 500ms cubic-bezier(0.250,0.250,0.750,0.750);-webkit-transition-timing-function:cubic-bezier(0.250,0.250,0.750,0.750);-moz-transition-timing-function:cubic-bezier(0.250,0.250,0.750,0.750);-o-transition-timing-function:cubic-bezier(0.250,0.250,0.750,0.750);transition-timing-function:cubic-bezier(0.250,0.250,0.750,0.750);}</style>
+<div class="container" style="max-width:931px;">
+    <h2 class="page-header text-center">Article</h2>
+    <div class="row visible-lg-block">
+        <div class="col-md-12">
+            <div style="height: 270px; background: #ccc;">
+                <div id="scroll-note">
+                    <div id="scroll-ico"></div>
+                    <h4>scroll down to see demo</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-xs-6 col-md-3">
+            <div style="background: #eee; height: 100px;"></div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div style="background: #eee; height: 100px;"></div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div style="background: #eee; height: 100px;"></div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div style="background: #eee; height: 100px;"></div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div style="background: #eee; margin: 0 0 1em; height: 50px;"></div>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div style="background: #eee; margin: 0 0 1em; height: 50px;"></div>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                </div>
+            </div>
+            <div id="inread"></div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div style="background: #eee; margin: 0 0 1em; height: 50px;"></div>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div style="background: #eee; margin: 0 0 1em; height: 50px;"></div>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div style="background: #eee; margin: 0 0 1em; height: 50px;"></div>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                    <p style="background: #eee; height:2em;"></p>
+                </div>
+            </div>
+            <!-- <div class="row">
+    <div class="col-xs-6">
+    <div class="panel panel-default" style="height: 100px;"></div>
+    </div>
+    <div class="col-xs-6">
+    <div class="panel panel-default" style="height: 100px;"></div>
+    </div>
+    </div> -->
+            <div style="background: #eee; margin:10px 0; height: 100px;"></div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                    <p style="background: #f1f1f1; height:1em;"></p>
+                </div>
+            </div>
+            <div id="impactify-little-follower"></div>
+        </div>
+    </div>
+</div>
+<div class="big-preloader hidden"></div>
+<div class="preloader hidden"></div>
+<div class="centered-spinner hidden"></div>
+<script type="text/javascript">
+
+    var _query = {};
+
+    (function () {
+      var args = document.location.search.substr(1).split('&');
+      for (var i = 0, len = args.length, parts; i < len; i++) {
+        parts = args[i].split('=');
+        _query[parts[0]] = parts[1];
+      }
+    })();
+
+    //Change title based on title param of the query
+    document.querySelector('title').innerText = 'Demo - Teads Bootcamp';
+    document.querySelector('h2.page-header').innerText = 'Teads Bootcamp';
+
+    var vastUrl = decodeURIComponent(_query.vast || "http://localhost:9000/ad");
+    var pageId = 0;
+    var placementId = 1;
+    var formatName = 'inread';
+
+    window._ttp = {};
+    window._ttp[pageId] = [
+      {
+        pid: placementId,
+        format: formatName,
+        slot: {
+          selector: '#inread',
+          //auto: true,
+          minimum: 0,
+        }
+      },
+    ];
+
+    window._tta = {};
+    window._tta[pageId] = [
+      {
+        type: _query.type ? decodeURIComponent(_query.type) : "VastUrl",
+        content: vastUrl,
+        settings: {
+          values: {
+            pageId: pageId,
+            placementId: placementId,
+            placementFormat: formatName,
+            threshold: 50,
+          },
+          components: {},
+          behaviors: {}
+        }
+      }
+    ];
+
+    var script = document.createElement('script');
+    script.src = '//cdn.teads.tv/media/format.js';
+    (document.body || document.head || document.documentElement).appendChild(script);
+    script.onload = function () {
+      script.parentNode.removeChild(script);
+    };
+  </script>
+</body>
+
+</html>

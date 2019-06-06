@@ -1,24 +1,47 @@
 package controllers
 
-import javax.inject._
-import play.api._
-import play.api.mvc._
+import java.time.Instant
+import java.util.UUID
 
-/**
-  * This controller creates an `Action` to handle HTTP requests to the
-  * application's home page.
-  */
+import javax.inject._
+import models._
+import play.api.mvc._
+import play.twirl.api.XmlFormat
+import play.api.Logger
+
+import scala.util.Random
+
 @Singleton
 class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
-  /**
-    * Create an Action to render an HTML page.
-    *
-    * The configuration in the `routes` file means that this method
-    * will be called when the application receives a `GET` request with
-    * a path of `/`.
-    */
-  def index() = Action { implicit request: Request[AnyContent] =>
-    Redirect("http://s8t.teads.tv/vast/5691609772457984")
+  var events = Vector.empty[(String, String)]
+
+  val logger = Logger("play")
+
+  private def renderVast(
+                          creative: Creative,
+                          sessionId: String
+                        ): XmlFormat.Appendable = {
+    views.xml.vast.render(creative.id, creative.url, sessionId)
   }
+
+  def index() = Action { request =>
+    logger.info(request.uri)
+    Ok(views.html.demo.render())
+  }
+
+  def getAd() = Action { request =>
+    logger.info(request.uri)
+
+    Ok(renderVast(Random.shuffle(Creative.all).head, sessionId = "0000"))
+  }
+
+
+  def track() = Action { request =>
+    logger.info(request.uri)
+    logger.info(request.queryString("action").head)
+
+    Ok
+  }
+
 }

@@ -1,0 +1,20 @@
+@(creativeId:Long,vastURL:String,sessionId:String)
+
+<VAST version="3.0">
+    <Ad id="@creativeId">
+        <Wrapper>
+            <AdSystem>Ad</AdSystem>
+            <VASTAdTagURI>@vastURL</VASTAdTagURI>
+            <Impression><![CDATA[http://localhost:9000/track?action=impression&creativeId=@creativeId&sessionId=@sessionId]]></Impression>
+            <Creatives>
+                <Creative>
+                    <Linear>
+                        <TrackingEvents>
+                            <Tracking event="complete"><![CDATA[http://localhost:9000/track?action=complete&creativeId=@creativeId&sessionId=@sessionId]]></Tracking>
+                        </TrackingEvents>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </Wrapper>
+    </Ad>
+</VAST>
