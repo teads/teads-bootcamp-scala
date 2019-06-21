@@ -14,7 +14,7 @@ import scala.util.Random
 @Singleton
 class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
-  var events = Vector.empty[(String, String)]
+  var events = Vector.empty[TrackingEvent]
 
   val logger = Logger("play")
 
@@ -33,13 +33,37 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   def getAd() = Action { request =>
     logger.info(request.uri)
 
-    Ok(renderVast(Random.shuffle(Creative.all).head, sessionId = "0000"))
+    val allCreatives = Random.shuffle(Creative.all)
+
+    val eligibleCreatives = allCreatives.filterNot(creative => creative.capped(events))
+
+    val creativesSortedByScoreDesc =
+      eligibleCreatives
+        .map(creative => creative -> creative.score(events))
+        .sortBy(_._2)(Ordering[Double].reverse)
+        .map(_._1)
+
+    Ok(renderVast(creativesSortedByScoreDesc.head, sessionId = UUID.randomUUID().toString))
   }
 
 
   def track() = Action { request =>
     logger.info(request.uri)
-    logger.info(request.queryString("action").head)
+
+    val action = request.queryString("action").head
+    val sessionId = request.queryString("sessionId").head
+    val creativeId = request.queryString("creativeId").head.toLong
+    val timestamp = Instant.now()
+
+    val event = TrackingEvent(sessionId, action, timestamp, creativeId)
+
+    if (events.contains(event)) {
+      logger.warn("Error, fraud detected!")
+    } else {
+      events = events :+ event
+    }
+
+    logger.info(action)
 
     Ok
   }
